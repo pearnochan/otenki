@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang="ja">
+<head>
+        <!-- 文字コードはUTF８を使います　文字化け防止 -->
+        <meta charset="UTF-8">
+        <!-- スマホでも画面の -->
+         <meta name="viewport" content="width=device-width,initial-scale=1.0">        <title>お天気自動販売機☀️☔️⛄️</title>
+
+         <link rel="stylesheet" href="style.css">
+
+</head>
+<!-- 
+        <input type="number" id="moneyInput" value="150" /> 円
+        <button id="intserMoneyBtn">お金を投入</button>
+
+        <p>現在の投入金額:<span id="currentMoneyStatus">0</span>円</p>
+        <p id="oldlog"></p> -->
+
+        <body>
+            <h1>---自動販売機へようこそ---</h1>
+
+            <div>
+                <!--  説明用テキスト　for="moneyInput"と書くことで、私はid="moneyInput"という部品のための説明係ですよ-->
+                <label for="moneyInput">💰カネイレロ💰</label>
+                <input type="number" id="moneyInput" min="0" placeholder="例: 500">
+                <!-- ユーザーがお金をタイピングして入力するための　白いボックスを作る 
+                 type="number":この入力欄には数字しか入れさせない　という制限
+                 id="moneyInput"入力欄に与えられた、世界に一つだけの背番号(名前)　
+                 あとでjsからmoneyInputという箱に入力された数字を持ってきて
+                 min="0":マイナスの金額を入力->-できないようにブロック
+                 placeholder="例:500"入力欄が空っぽ時に、薄いグレーの文字表示される入力の見本　
+                 文字入力されると消える-->
+                 <button id="intserMoneyBtn">💰💰カネイレロ💰💰</button>
+                 <!-- マウスでカチってとクリックできるボタンを作る
+                  ボタンの中身にはお金を入れるという文字を書く -->
+            </div>
+            <p>現在の投入金額:<span id="currentMoneyStatus">0</span></p>
+            <!-- 0」という数字の部分だけを <span> というタグで囲っています。<span> 自体は見た目を変えない透明なテープのようなタグですが、ここに id="currentMoneyStatus"（現在の所持金状態）という背番号をつけています。
+
+なぜかというと、JavaScriptが「この 0 の部分だけをピンポイントで 120 とか 500 に書き換えられるようにするため」 -->
+                 <button id="cancelBtn">キャンセル・返金</button>
+         <hr>
+
+         <h2>商品を選んでください</h2>
+         <div id="productContainer"></div>
+         <!-- id="productContainer"(商品を入れるコンテナ)という名前のついた
+          今は中身が完全に空っぽの箱 -->
+          <hr>
+          <h3>[履歴結果]</h3>
+          <div id="consolelog" class="console">お金を投入してね</div>
+
+          <script src="otenki.js"></script>
+        </body>
+    
+</html>

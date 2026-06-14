@@ -1,0 +1,40 @@
+{
+  "name": "JavaScript研修",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "christian-kohler.path-intellisense",
+        "formulahendry.code-runner"
+      ]
+    }
+  },
+  "forwardPorts": [3030],
+  "remoteUser": "node"
+}
+
+// {
+//   "name": "JavaScript研修",
+//   "build": {
+//     "dockerfile": "Dockerfile"
+//   },
+//   "customizations": {
+//     "vscode": {
+//       "extensions": [
+//         "dbaeumer.vscode-eslint",
+//         "esbenp.prettier-vscode",
+//         "christian-kohler.path-intellisense",
+//         "formulahendry.code-runner"
+//       ]
+//     }
+//   },
+//   "forwardPorts": [3030],
+//   "remoteUser": "node"
+// }

@@ -1,0 +1,134 @@
+body{
+    /* 全体の色 */
+    background-color: #fcf9f2; 
+    /* 文字 */
+    color: #967987;
+    font-family: 'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN',sans-serif;
+    margin:0;
+    padding: 30px;
+    display: flex;
+    flex-direction: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font: size 24px;
+    letter-spacing: 2px;
+    color:#5c7a95;
+    margin: bottom 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+h2,h3{
+    color:#6a7b83;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+/* お金の投入エリア */
+label{
+    font-weight: bold;
+    color: #8fa4b7;
+    margin-right: 8px;
+}
+
+#moneyInput{
+    border: 1px solid #d3e2ec;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 16px;
+    width: 100px;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: inset 1px 1px 4px rgba(0,0,0,0.05);
+    outline: none;
+    color: #4a4a4a;
+}
+
+/* 金いれろボタン */
+#intserMoneyBtn{
+    background: linear-gradient(135deg,#e0f2e0,#bae6fd 100%);
+    border:1px solid #93c5fd;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #436480;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    margin-left: 5px;
+}
+
+/*  */
+#interMoneyBtn:hover{
+    background: linear-gradient(135deg,#bae6fd 0%, #7dd3fc 100%);
+    transform: translateY(-1px);
+}
+
+/* 現在の投入金額のテキスト */
+p{
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* 金額の数字部分を目立たせる */
+#currentMoneyStatus{
+    font-size: 22px;
+    font-weight: bold;
+    color: #4f8ab5;
+    margin: 0 5px;
+}
+
+
+#productContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px;
+    gap: 12px;
+}
+
+#productContainer button{
+
+    background: linear-gradient(135deg,#e0e7ff 0%, #f3e8ff 50%, #e0f2e0 100%);
+    border: 1px solid #c7d2fe;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #4f566b;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(165,180,252,0.15);
+    transition: all 0.25 ease;
+}
+
+#productContainer button:hover{
+
+    background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+    border-color: #a5b4fc;
+    box-shadow:  0 6px 12px rgba(165,180,252,0.3);
+    transform: translateY(-2px)scale(1.03);
+}
+
+#productContainer button:nth-child(5){
+    background: linear-gradient(135deg,#fae8ff 0%, #f3e8ff 100%);
+    border-color: #f5d0fe;
+}
+
+#consolelog{
+    width: 90%;
+    max-width: 460px;
+    min-height: 40px;
+
+    background-color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(217,226,236,0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 15px;
+    text-align: center;
+    font-size: 15px;
+    color: #52606d;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    line-height: 1.5;
+}
+
