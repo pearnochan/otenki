@@ -1,18 +1,24 @@
 body{
-    /* 全体の色 */
+    /* bodyタグ（ページ全体）のデザインを設定する */
+    /* 全体の色 ページ全体の背景色を設定している。*/
     background-color: #fcf9f2; 
     /* 文字 */
     color: #967987;
     font-family: 'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN',sans-serif;
+    /* ページの外側の余白を0にする。 */
     margin:0;
+    /* ページの内側に30pxの余白を作る。 */
     padding: 30px;
+    /* Flexboxというレイアウト機能を使う。子要素を並べたり中央寄せしたりしやすくなる。 */
     display: flex;
-    flex-direction: flex;
+
+    flex-direction: row;
     flex-direction: column;
     align-items: center;
 }
 
 h1{
+    /* h1タグ（一番大きい見出し）のデザインを設定する */
     font: size 24px;
     letter-spacing: 2px;
     color:#5c7a95;
@@ -21,19 +27,26 @@ h1{
 }
 
 h2,h3{
+    /* h2タグとh3タグ（中くらいの見出し）のデザインをまとめて設定する */
     color:#6a7b83;
     font-size: 18px;
     margin-top: 25px;
 }
 
 /* お金の投入エリア */
+/*  labelタグ（入力欄の横にある「金額」などの文字）のデザインを設定する */
 label{
     font-weight: bold;
     color: #8fa4b7;
     margin-right: 8px;
 }
 
+    /* 金額を入力する白いボックスのデザインを設定する */
 #moneyInput{
+    /* 枠線を付ける。 */    
+    /* 1px → 太さ1ピクセル */
+    /* solid → 実線 */
+    /* #d3e2ec → 薄い水色 */
     border: 1px solid #d3e2ec;
     border-radius: 20px;
     padding: 8px 15px;
@@ -41,57 +54,84 @@ label{
     width: 100px;
     background-color: rgba(255,255,255,0.8);
     box-shadow: inset 1px 1px 4px rgba(0,0,0,0.05);
+    /* クリックしたときの青い枠を消す。 */
     outline: none;
+    /* 入力した文字の色 */
     color: #4a4a4a;
 }
 
 /* 金いれろボタン */
 #intserMoneyBtn{
+    /* 背景をグラデーションにする。 */
     background: linear-gradient(135deg,#e0f2e0,#bae6fd 100%);
+    /* ボタンの枠線。 */
     border:1px solid #93c5fd;
+    /* ボタンの角を丸くする。 */
     border-radius: 20px;
+    /* ボタンの中の余白。 */
     padding: 8px 18px;
     font-size: 14px;
     font-weight: bold;
     color: #436480;
     cursor: pointer;
+    /* ボタンの下に影を付ける。 */
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    /* デザインが変わるときにアニメーションを付ける。0.3秒で滑らかに変化？ */
     transition: all 0.3s ease;
     margin-left: 5px;
 }
 
-/*  */
+/*  お金投入ボタンにマウスを乗せたときのデザインを設定する*/
 #interMoneyBtn:hover{
+    /* background → 背景
+linear-gradient → 線形グラデーション
+135deg → 斜め135度方向にグラデーション
+#bae6fd 0% → 始まりは薄い水色
+#7dd3fc 100% → 終わりはやや濃い水色 */
     background: linear-gradient(135deg,#bae6fd 0%, #7dd3fc 100%);
+    /* transform → 要素を変形させる
+translateY(-1px) → 上に1px動かす */
     transform: translateY(-1px);
 }
 
 /* 現在の投入金額のテキスト */
 p{
     font-size: 16px;
+    /* margin-top → 要素の上側の外側の余白 */
     margin-top: 15px;
 }
 
-/* 金額の数字部分を目立たせる */
+/* 金額の数字部分を目立たせる 　所持金や投入金額の数字を大きく見やすくするためのCSS*/
 #currentMoneyStatus{
+    /* 普通の文字よりかなり大きい。22px */
     font-size: 22px;
     font-weight: bold;
     color: #4f8ab5;
+    /* margin: 上下 左右; */
     margin: 0 5px;
 }
 
-
+/* 商品ボタンを並べる箱のデザインを設定する */
 #productContainer{
+    /* Flexbox（フレックスボックス）を使う設定。
+中に入っているボタンを横に並べやすくなる。 */
     display: flex;
+    /* 横に並びきらなくなったら、自動で次の行に折り返す。
+つまり → 商品が増えても画面からはみ出さない！イメージ */
     flex-wrap: wrap;
+    /* 中のボタンたちを横方向の中央に寄せる */
     justify-content: center;
+    /* 箱の最大幅を 500px */
     max-width: 500px;
     gap: 12px;
 }
 
+/* 商品ボタンのデザインを設定する */
 #productContainer button{
 
+    /* 背景をグラデーションにする。 */
     background: linear-gradient(135deg,#e0e7ff 0%, #f3e8ff 50%, #e0f2e0 100%);
+    /* 枠線を付ける。 */
     border: 1px solid #c7d2fe;
     border-radius: 12px;
     padding: 12px 18px;
@@ -103,14 +143,15 @@ p{
     transition: all 0.25 ease;
 }
 
+/*  商品ボタンにマウスを乗せたときのデザインを設定 */
 #productContainer button:hover{
-
     background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
     border-color: #a5b4fc;
     box-shadow:  0 6px 12px rgba(165,180,252,0.3);
     transform: translateY(-2px)scale(1.03);
 }
 
+/* 商品ボックスの中の5番目のボタン（メルティーキッス）だけ特別なデザインを設定する */
 #productContainer button:nth-child(5){
     background: linear-gradient(135deg,#fae8ff 0%, #f3e8ff 100%);
     border-color: #f5d0fe;

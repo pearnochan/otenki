@@ -3,7 +3,7 @@
 <head>
         <!-- 文字コードはUTF８を使います　文字化け防止 -->
         <meta charset="UTF-8">
-        <!-- スマホでも画面の -->
+        <!-- 画面に合わせるよ -->
          <meta name="viewport" content="width=device-width,initial-scale=1.0">        <title>お天気自動販売機☀️☔️⛄️</title>
 
          <link rel="stylesheet" href="style.css">
@@ -17,15 +17,15 @@
         <p id="oldlog"></p> -->
 
         <body>
-            <h1>---自動販売機へようこそ---</h1>
+            <h1>---お天気自動販売機へようこそ---</h1>
 
             <div>
-                <!--  説明用テキスト　for="moneyInput"と書くことで、私はid="moneyInput"という部品のための説明係ですよ-->
-                <label for="moneyInput">💰カネイレロ💰</label>
+                <!--  　for="moneyInput"と書くことで、私はid="moneyInput"という部品のための説明係ですよ-->
+                <label for="moneyInput">💰カネ💰</label>
                 <input type="number" id="moneyInput" min="0" placeholder="例: 500">
                 <!-- ユーザーがお金をタイピングして入力するための　白いボックスを作る 
                  type="number":この入力欄には数字しか入れさせない　という制限
-                 id="moneyInput"入力欄に与えられた、世界に一つだけの背番号(名前)　
+                 id="moneyInput"入力欄に与えられた、背番号(名前)　
                  あとでjsからmoneyInputという箱に入力された数字を持ってきて
                  min="0":マイナスの金額を入力->-できないようにブロック
                  placeholder="例:500"入力欄が空っぽ時に、薄いグレーの文字表示される入力の見本　
